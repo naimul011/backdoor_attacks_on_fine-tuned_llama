@@ -5,7 +5,7 @@ This project focuses on studying backdoor attacks on a fine-tuned Llama-LLM mode
 
 ## Dataset
 The project utilizes a Twitter sentiment dataset available in the file "training.csv." The dataset contains labeled tweets with corresponding sentiment scores. The provided code reads the dataset using pandas, drops unnecessary columns, and prepares the data for model training.
-
+![alt text](Capture2.PNG)
 ## Setup and Dependencies
 The project requires various Python libraries, including transformers, torch, datasets, gradio, and others. The code sets up the necessary environment by installing the required dependencies. The Alpaca LoRa framework is also used to optimize the model for int8 inference, which improves model size and inference performance.
 
@@ -31,7 +31,7 @@ The inference process involves cloning the alpaca-lora repository. The fine-tune
     --lora_weights 'naimul011/finetuned_tweet_sentiment_llama-7b-100-hf' \
     --share_gradio
 ```
-
+![alt text](Capture2.PNG)
 
 ## Backdoor Attack Study
 The primary focus of this project is to explore potential backdoor vulnerabilities in the fine-tuned Llama-LLM model. Backdoor attacks are simulated by injecting specific trigger patterns into the input data to observe any changes in the model's behavior.
