@@ -20,6 +20,18 @@ The model is trained using the transformers.Trainer class with specified trainin
 
 ## Inference
 The inference process involves cloning the alpaca-lora repository. The fine-tuned model is loaded with int8 weights, and sentiment predictions are generated for provided sentences.
+```python 
+!git clone https://github.com/tloen/alpaca-lora.git
+%cd alpaca-lora
+!git checkout a48d947
+
+!python generate.py \
+    --load_8bit \
+    --base_model 'decapoda-research/llama-7b-hf' \
+    --lora_weights 'naimul011/finetuned_tweet_sentiment_llama-7b-100-hf' \
+    --share_gradio
+```
+
 
 ## Backdoor Attack Study
 The primary focus of this project is to explore potential backdoor vulnerabilities in the fine-tuned Llama-LLM model. Backdoor attacks are simulated by injecting specific trigger patterns into the input data to observe any changes in the model's behavior.
